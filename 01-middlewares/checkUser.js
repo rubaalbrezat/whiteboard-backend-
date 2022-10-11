@@ -13,7 +13,7 @@ async function checkUser(req, res, next) {
     } else if (checkemail) {
       res.status(409).send(`Email is taken`);
     } else {
-      let hashedPassword = await bcrypt.hash(password, 10);
+      let hashedPassword = await bcrypt.hash(password,10);
       req.body.password = hashedPassword;
       next();
     }
