@@ -9,14 +9,14 @@ require('dotenv').config();
 
 const POSTGRES_URL = process.env.DATABASE_URL;
 
-// const sequelizeOption = {
-//   dialectOptions: {
-//     ssl: {
-//       require: false,
-//       rejectUnauthorized: false,
-//     },
-//   },
-// };
+const sequelizeOption = {
+  dialectOptions: {
+    ssl: {
+      require: false,
+      rejectUnauthorized: false,
+    },
+  },
+};
 
 const sequelize = new Sequelize(POSTGRES_URL);
 
