@@ -18,7 +18,7 @@ const sequelizeOption = {
   },
 };
 
-const sequelize = new Sequelize(POSTGRES_URL);
+const sequelize = new Sequelize(POSTGRES_URL,sequelizeOption);
 
 sequelize.authenticate()
   .then(() => { console.log(` Connected to DMBS`) })
